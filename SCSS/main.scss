@@ -1,0 +1,116 @@
+@import '../SCSS/vendor';
+@import '../SCSS/mixin';
+@import '../SCSS/var';
+
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+}
+
+.my-btn{
+    @include mybtn;
+ &:hover{
+   @include hovereffects;
+ }
+}
+
+header {
+	position: absolute;
+	z-index: 10;
+	width: 100vw;
+    line-height: 7rem;
+}
+
+nav {
+  background-color: rgba(7, 7, 7, 0.308);
+
+ & a{
+   text-decoration: none;
+    &:hover{
+        color: $white-color;
+        filter: drop-shadow(0 1.5rem 1rem rgba(255,255,255,0.5));
+    }
+ }
+}
+.navbar-brand{
+    font-weight: bold;
+    color: $primary-color;
+    font-size: 3rem;
+    animation:logo 1s linear infinite;
+    animation-direction: alternate;
+
+    @keyframes logo {
+        from {
+            transform:scale(0.99);
+        }
+        to{
+            transform:scale(1);
+        }
+    }
+    & :hover{
+        color: $white-color;
+        filter: drop-shadow(0 1.5rem 1rem rgba(255,255,255,0.5));
+    }
+}
+
+ .navbar-nav{
+    padding-left: 1rem;
+    & .nav-item .nav-link{
+        color: $primary-color;
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-right: 3rem;
+    }
+  & .nav-item:last-child > nav-link{
+      padding-right: 0%;
+  } 
+ 
+}
+
+.active{
+    filter: drop-shadow(0 1.5rem 1rem rgb(255, 255, 255));
+  }
+
+.hero{
+    position: relative;
+	background: url(..//Images/car22.jpg);
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+    justify-content: center;
+
+    & h1{
+        font-family: 'Akaya Telivigala', cursive;
+        font-size: 70px;
+        font-weight: 800;
+        color: $primary-color;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+	
+    & .btn1{
+
+        @include mybtn;
+        font-family: 'Akaya Telivigala', cursive;
+        display: inline-block;
+        margin: 1em 0 0 0;
+        border: none;
+        text-decoration: none;
+        font-weight: 800;
+        padding: 10px 20px;
+    
+        &:hover{
+           @include hovereffects;
+        }
+    }
+}
+.mydiv{
+    text-align: center;
+}
